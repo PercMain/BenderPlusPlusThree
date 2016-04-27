@@ -36,6 +36,8 @@ public:
 private:
     //Pitch for gear system
     int _pitch;
+    //Shaft Diameter
+    float _shaftDiameter;
     //Temporary storage vector
     vector<float> _tempStorage;
     
