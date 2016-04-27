@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A554C1221CD056B5000B3F80 /* SpiralGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A554C1201CD056B5000B3F80 /* SpiralGenerator.cpp */; };
+		A554C1251CD05882000B3F80 /* GearGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A554C1231CD05882000B3F80 /* GearGenerator.cpp */; };
 		A57AC3F31CD05144008FC527 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A57AC3F21CD05144008FC527 /* main.cpp */; };
 		A57AC3F51CD05144008FC527 /* BenderPlusPlusThree.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A57AC3F41CD05144008FC527 /* BenderPlusPlusThree.1 */; };
+		A57AC3FD1CD051DF008FC527 /* SvgPacker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A57AC3FB1CD051DF008FC527 /* SvgPacker.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,9 +28,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A554C1201CD056B5000B3F80 /* SpiralGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpiralGenerator.cpp; sourceTree = "<group>"; };
+		A554C1211CD056B5000B3F80 /* SpiralGenerator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SpiralGenerator.h; sourceTree = "<group>"; };
+		A554C1231CD05882000B3F80 /* GearGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GearGenerator.cpp; sourceTree = "<group>"; };
+		A554C1241CD05882000B3F80 /* GearGenerator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = GearGenerator.h; sourceTree = "<group>"; };
 		A57AC3EF1CD05144008FC527 /* BenderPlusPlusThree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BenderPlusPlusThree; sourceTree = BUILT_PRODUCTS_DIR; };
 		A57AC3F21CD05144008FC527 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A57AC3F41CD05144008FC527 /* BenderPlusPlusThree.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = BenderPlusPlusThree.1; sourceTree = "<group>"; };
+		A57AC3FB1CD051DF008FC527 /* SvgPacker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SvgPacker.cpp; sourceTree = "<group>"; };
+		A57AC3FC1CD051DF008FC527 /* SvgPacker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SvgPacker.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +50,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A554C1261CD058C0000B3F80 /* SvgPacker */ = {
+			isa = PBXGroup;
+			children = (
+				A57AC3FC1CD051DF008FC527 /* SvgPacker.h */,
+				A57AC3FB1CD051DF008FC527 /* SvgPacker.cpp */,
+			);
+			name = SvgPacker;
+			sourceTree = "<group>";
+		};
+		A554C1271CD058CC000B3F80 /* SpiralGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				A554C1211CD056B5000B3F80 /* SpiralGenerator.h */,
+				A554C1201CD056B5000B3F80 /* SpiralGenerator.cpp */,
+			);
+			name = SpiralGenerator;
+			sourceTree = "<group>";
+		};
+		A554C1281CD058E0000B3F80 /* GearGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				A554C1241CD05882000B3F80 /* GearGenerator.h */,
+				A554C1231CD05882000B3F80 /* GearGenerator.cpp */,
+			);
+			name = GearGenerator;
+			sourceTree = "<group>";
+		};
 		A57AC3E61CD05143008FC527 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +97,9 @@
 			isa = PBXGroup;
 			children = (
 				A57AC3F21CD05144008FC527 /* main.cpp */,
+				A554C1261CD058C0000B3F80 /* SvgPacker */,
+				A554C1271CD058CC000B3F80 /* SpiralGenerator */,
+				A554C1281CD058E0000B3F80 /* GearGenerator */,
 				A57AC3F41CD05144008FC527 /* BenderPlusPlusThree.1 */,
 			);
 			path = BenderPlusPlusThree;
@@ -117,6 +156,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A554C1251CD05882000B3F80 /* GearGenerator.cpp in Sources */,
+				A57AC3FD1CD051DF008FC527 /* SvgPacker.cpp in Sources */,
+				A554C1221CD056B5000B3F80 /* SpiralGenerator.cpp in Sources */,
 				A57AC3F31CD05144008FC527 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,6 +267,7 @@
 				A57AC3FA1CD05144008FC527 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
