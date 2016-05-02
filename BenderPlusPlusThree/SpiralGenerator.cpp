@@ -8,7 +8,7 @@
 
 #include "SpiralGenerator.h"
 
-//instance of SvgPacker used internally by SpiralGenerator
+//Instance of SvgPacker used internally by SpiralGenerator
 SvgPacker svgSpiralInternalInstance;
 
 //How many spiral paths are drawn total, controls how "busy" the pattern appears

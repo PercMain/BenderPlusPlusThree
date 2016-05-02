@@ -10,9 +10,7 @@
 
 //Constructor
 GearGenerator::GearGenerator()
-{
-    
-}
+{}
 
 //Sets shaft diameter (and minimum gear diameter) for further calculations until changed
 void GearGenerator::setShaftDiameter(float shaftDiameter)

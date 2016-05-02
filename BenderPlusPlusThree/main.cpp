@@ -14,7 +14,7 @@ using namespace std;
 
 SvgPacker svg;
 SpiralGenerator spiral(300);
-GearGenerator gear(24);
+GearGenerator gear();
 
 int main(int argc, const char * argv[])
 {

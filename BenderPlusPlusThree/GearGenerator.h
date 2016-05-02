@@ -12,6 +12,7 @@
 #include <iostream>
 #include "SvgPacker.h"
 
+//Stores gear profile and size info
 struct gear_t
 {
     int numberOfTeeth;

@@ -22,7 +22,7 @@ public:
     string generate(vector<float> xy);
     
 private:
-    //How many soiral paths are drawn total, controls how "busy" the pattern appears
+    //How many spiral paths are drawn total, controls how "busy" the pattern appears
     int _density;
     
 };

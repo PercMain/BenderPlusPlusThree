@@ -147,7 +147,7 @@ string SvgPacker::poly(vector<float> xy)
     
 }
 
-//Generates circle segment centered at coordinates between angle start and stop
+//Generates circle segment centered at coordinates between angle start and angle stop
 string SvgPacker::arc(float radius, float xCenter, float yCenter, float angleStart, float angleStop)
 {
     string LineStart = "<path d=\"M ";
