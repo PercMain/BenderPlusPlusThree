@@ -172,6 +172,27 @@ string SvgPacker::arc(double radius, double xCenter, double yCenter, double angl
     + LineEnd;
 }
 
+//Creates quadratic bezier curve from start, stop and control point coordinates
+string SvgPacker::quadBezier(double xStart, double yStart, double xStop, double yStop, double xControl, double yControl)
+{
+    string LineStart = "<path de\"m ";
+    string Second = " Q ";
+    string LineEnd = "\" stroke=\"black\" fill=\"transparent\"/>\n";
+    
+    string XStart = to_string(xStart);
+    string YStart = to_string(yStart);
+    
+    string XStop = to_string(xStop);
+    string YStop = to_string(yStop);
+    
+    string XControl = to_string(xControl);
+    string YControl = to_string(yControl);
+    
+    return LineStart + XStart + " " + YStart
+        + Second + XStop + " " + YStop + XControl + " " + YControl + LineEnd;
+    
+}
+
 //Creates a rotational pattern around a center
 string SvgPacker::rotationPattern(string content, int numberOfInstances, double xCenter, double yCenter)
 {
