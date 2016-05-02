@@ -10,10 +10,6 @@
 
 #define PI 3.14159265
 
-
-//using namespace std;
-
-
 //Constructor
 SvgPacker::SvgPacker()
 {
@@ -227,5 +223,3 @@ void SvgPacker::addToTemp(string addition)
 {
     _TempContent += addition;
 }
-
-

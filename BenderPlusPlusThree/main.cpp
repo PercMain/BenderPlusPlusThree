@@ -6,13 +6,6 @@
 //  Copyright (c) 2016 Ben Lewson. All rights reserved.
 //
 
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <vector>
-#include <unistd.h>
-#include <math.h>
-
 #include "SvgPacker.h"
 #include "SpiralGenerator.h"
 #include "GearGenerator.h"

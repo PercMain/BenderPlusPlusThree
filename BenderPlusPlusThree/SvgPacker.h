@@ -6,8 +6,8 @@
 //  Copyright (c) 2016 Ben Lewson. All rights reserved.
 //
 
-#ifndef __BenderPlusPlusThree__SvgPacker__
-#define __BenderPlusPlusThree__SvgPacker__
+#ifndef SvgPacker_h
+#define SvgPacker_h
 
 #include <iostream>
 #include <fstream>
