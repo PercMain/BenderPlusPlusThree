@@ -24,7 +24,7 @@ class GearGenerator
 {
 public:
     //Constructor
-    GearGenerator();
+    GearGenerator(bool pressureAngleTwenty = true);
     
     //Sets shaft diameter (and minimum gear diameter) for further calculations until changed
     void setShaftDiameter(float shaftDiameter);
@@ -39,6 +39,9 @@ public:
     //and desired gear ratio. Ratio is Driving:Driven. Return is <Driving, Driven>
     vector<gear_t> calculateTooth(float centerDistance, float desiredRatio);
     
+    //Creates a gear struct from number of teeth and preset info
+    gear_t generateGear(int numberOfTeeth);
+    
     //Calls SvgPacker to draw completed gear
     string drawGear (gear_t profile);
     
@@ -48,6 +51,8 @@ private:
     int _pitch;
     //Shaft Diameter
     float _shaftDiameter;
+    //Pressure angle, true = 20, false = 14.5
+    bool _pressureAngle;
     //Temporary storage vector
     vector<float> _tempStorage;
     
