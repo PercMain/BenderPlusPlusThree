@@ -71,3 +71,9 @@ gear_t GearGenerator::generateGear(int numberOfTeeth)
     
     return gear;
 }
+
+string GearGenerator::drawGear(gear_t profile)
+{
+    
+    return " ";
+}
