@@ -90,5 +90,6 @@ private:
     string _TempContent;
 };
 
-
 #endif /* defined(__BenderPlusPlusThree__SvgPacker__) */
+
+
