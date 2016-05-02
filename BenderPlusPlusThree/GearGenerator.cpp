@@ -18,7 +18,7 @@ GearGenerator::GearGenerator(bool pressureAngleTwenty)
 }
 
 //Sets shaft diameter (and minimum gear diameter) for further calculations until changed
-void GearGenerator::setShaftDiameter(float shaftDiameter)
+void GearGenerator::setShaftDiameter(double shaftDiameter)
 {
     _shaftDiameter = shaftDiameter;
 }
@@ -32,7 +32,7 @@ void GearGenerator::setGearPitch(int pitch)
 
 //Generates gear profile parameters based on distance from center to center
 //and desired gear ratio. Ratio is Driving:Driven. Return is <Driving, Driven>
-vector<gear_t> GearGenerator::calculateTooth(float centerDistance, float desiredRatio)
+vector<gear_t> GearGenerator::calculateTooth(double centerDistance, double desiredRatio)
 {
     gear_t ret;
     ret.numberOfTeeth = 20;
@@ -51,12 +51,12 @@ gear_t GearGenerator::generateGear(int numberOfTeeth)
     
     gear.numberOfTeeth = numberOfTeeth;
     
-    float pitchDiameter = numberOfTeeth / (float)_pitch;
-    float rootRadius = (0.5)*pitchDiameter*cos(PI * _pressureAngle / 180.0);
+    double pitchDiameter = numberOfTeeth / (double)_pitch;
+    double rootRadius = (0.5)*pitchDiameter*cos(PI * _pressureAngle / 180.0);
     
     gear.rootRadius = rootRadius;
     
-    float toothHeight;
+    double toothHeight;
     
     if (_pitch >= 20)//If pitch is 20 or finer
     {

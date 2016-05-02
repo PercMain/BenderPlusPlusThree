@@ -19,7 +19,7 @@ public:
     SpiralGenerator(int density);
     
     //Generates spiral pattern from vector of bounding point coordinates
-    string generate(vector<float> xy);
+    string generate(vector<double> xy);
     
 private:
     //How many spiral paths are drawn total, controls how "busy" the pattern appears

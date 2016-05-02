@@ -36,37 +36,37 @@ public:
     string fileFooter();
     
     //Rotation transform opening tag and wrapper, takes angle and center of rotation
-    string rotationHeader(float angle, float x, float y);
-    string rotationWrap(string content, float angle, float x, float y);
+    string rotationHeader(double angle, double x, double y);
+    string rotationWrap(string content, double angle, double x, double y);
     
     //pattern tag opening and wrapper. Takes width and height of base pattern
-    string patternHeader(float width, float height);
-    string patternWrap(string content, float width, float height);
+    string patternHeader(double width, double height);
+    string patternWrap(string content, double width, double height);
     
     //returns <defs> or </defs> from true or false respectively. Wraps content
     string defsTag(bool openClose);
     string defsWrap(string content);
     
     //Creates line element from start and stop coordinates
-    string line(float xStart, float yStart, float xStop, float yStop);
+    string line(double xStart, double yStart, double xStop, double yStop);
     
     //Creates circle element from radius and center coordinates
-    string circle(float radius, float xCenter, float yCenter);
+    string circle(double radius, double xCenter, double yCenter);
     
     //Creates arc element from radius, center coordinates, and angular limits
-    string arc(float radius, float xCenter, float yCenter, float angleStart, float angleStop);
+    string arc(double radius, double xCenter, double yCenter, double angleStart, double angleStop);
     
     //Creates quadratic bezier curve from start, stop and control point coordinates
-    string quadBezier(float xStart, float yStart, float xStop, float yStop, float xControl, float yControl);
+    string quadBezier(double xStart, double yStart, double xStop, double yStop, double xControl, double yControl);
     
     //Creates polyline from coordinate vector
-    string poly(vector<float> xy);
+    string poly(vector<double> xy);
     
     //Creates a rotational pattern
-    string rotationPattern(string content, int numberOfInstances, float xCenter, float yCenter);
+    string rotationPattern(string content, int numberOfInstances, double xCenter, double yCenter);
     
     //Creates dashed perimeter circle
-    string dashedCircle(float radius, float xCenter, float yCenter, float arcLength, int numberOfArcs, bool centerOnGap);
+    string dashedCircle(double radius, double xCenter, double yCenter, double arcLength, int numberOfArcs, bool centerOnGap);
     
     //
     // Tag and content arrangement

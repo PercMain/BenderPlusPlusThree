@@ -18,13 +18,13 @@ GearGenerator gear();
 
 int main(int argc, const char * argv[])
 {
-    vector<float> topTri = {200,20,130,150,270,150};
+    vector<double> topTri = {200,20,130,150,270,150};
     
-    vector<float> leftTri = {60,280,40,440,200,360};
+    vector<double> leftTri = {60,280,40,440,200,360};
     
-    vector<float> rightTri = {340,280,200,360,360,440};
+    vector<double> rightTri = {340,280,200,360,360,440};
     
-    vector<float> midPent = {130,150,60,280,200,360,340,280,270,150};
+    vector<double> midPent = {130,150,60,280,200,360,340,280,270,150};
     
     svg.addToWork(spiral.generate(topTri));
     

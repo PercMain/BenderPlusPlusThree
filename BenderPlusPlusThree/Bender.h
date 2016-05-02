@@ -18,7 +18,7 @@ public:
     //Constructor
     Bender();
     
-    string generateBend(float height, float width, int numberOfCuts);
+    string generateBend(double height, double width, int numberOfCuts);
 };
 
 #endif /* defined(__BenderPlusPlusThree__Bender__) */

@@ -16,8 +16,8 @@
 struct gear_t
 {
     int numberOfTeeth;
-    float toothHeight;
-    float rootRadius;
+    double toothHeight;
+    double rootRadius;
 };
 
 class GearGenerator
@@ -27,17 +27,17 @@ public:
     GearGenerator(bool pressureAngleTwenty = true);
     
     //Sets shaft diameter (and minimum gear diameter) for further calculations until changed
-    void setShaftDiameter(float shaftDiameter);
+    void setShaftDiameter(double shaftDiameter);
     
     //Sets gear pitch
     void setGearPitch(int pitch);
     
     //Generates tooth counts from center to center distance and
-    vector<int> calcToothCounts(float centerDistance, float desiredRatio);
+    vector<int> calcToothCounts(double centerDistance, double desiredRatio);
     
     //Generates gear profile parameters based on distance from center to center
     //and desired gear ratio. Ratio is Driving:Driven. Return is <Driving, Driven>
-    vector<gear_t> calculateTooth(float centerDistance, float desiredRatio);
+    vector<gear_t> calculateTooth(double centerDistance, double desiredRatio);
     
     //Creates a gear struct from number of teeth and preset info
     gear_t generateGear(int numberOfTeeth);
@@ -50,11 +50,11 @@ private:
     //Pitch for gear system
     int _pitch;
     //Shaft Diameter
-    float _shaftDiameter;
+    double _shaftDiameter;
     //Pressure angle, true = 20, false = 14.5
     bool _pressureAngle;
     //Temporary storage vector
-    vector<float> _tempStorage;
+    vector<double> _tempStorage;
     
 };
 

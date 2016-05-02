@@ -32,7 +32,7 @@ string SvgPacker::fileFooter()
 }
 
 //Returns the opening tags to a rotation transform
-string SvgPacker::rotationHeader(float angle, float xCenter, float yCenter)
+string SvgPacker::rotationHeader(double angle, double xCenter, double yCenter)
 {
     
     string LineStart = "<g id=\"GearTooth\" transform=\"rotate(";
@@ -46,13 +46,13 @@ string SvgPacker::rotationHeader(float angle, float xCenter, float yCenter)
 }
 
 //Wraps content in rotation transform tags
-string SvgPacker::rotationWrap(string content, float angle, float xCenter, float yCenter)
+string SvgPacker::rotationWrap(string content, double angle, double xCenter, double yCenter)
 {
     return rotationHeader(angle, xCenter, yCenter) + content + "</g>\n";
 }
 
 //Returns opening tag for pattern
-string SvgPacker::patternHeader(float width, float height)
+string SvgPacker::patternHeader(double width, double height)
 {
     //<pattern id="TrianglePattern" patternUnits="userSpaceOnUse"
     //x="0" y="0" width="20" height="10"
@@ -69,7 +69,7 @@ string SvgPacker::patternHeader(float width, float height)
 }
 
 //Wraps in pattern tags
-string SvgPacker::patternWrap(string content, float width, float height)
+string SvgPacker::patternWrap(string content, double width, double height)
 {
     return patternHeader(width, height) + content + "</pattern>\n";
 }
@@ -94,7 +94,7 @@ string SvgPacker::defsWrap(string content)
 }
 
 //Returns line tags with coordinate data
-string SvgPacker::line(float xStart, float yStart, float xStop, float yStop)
+string SvgPacker::line(double xStart, double yStart, double xStop, double yStop)
 {
     string LineStart = "<line x1=\"";
     string Second = "\" y1=\"";
@@ -112,7 +112,7 @@ string SvgPacker::line(float xStart, float yStart, float xStop, float yStop)
 }
 
 //Returns circle of given radius centered at coordinates
-string SvgPacker::circle(float radius, float xCenter, float yCenter)
+string SvgPacker::circle(double radius, double xCenter, double yCenter)
 {
     //<circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
     string LineStart = "<circle cx=\"";
@@ -129,7 +129,7 @@ string SvgPacker::circle(float radius, float xCenter, float yCenter)
 }
 
 //Creates polyline following coordinate vector
-string SvgPacker::poly(vector<float> xy)
+string SvgPacker::poly(vector<double> xy)
 {
     _TempContent.clear();
     string LineStart = "<polyline points=\"";
@@ -148,14 +148,14 @@ string SvgPacker::poly(vector<float> xy)
 }
 
 //Generates circle segment centered at coordinates between angle start and angle stop
-string SvgPacker::arc(float radius, float xCenter, float yCenter, float angleStart, float angleStop)
+string SvgPacker::arc(double radius, double xCenter, double yCenter, double angleStart, double angleStop)
 {
     string LineStart = "<path d=\"M ";
     string Second = " A ";
     string Third = " 0 0 1 ";
     string LineEnd = "\" stroke = \"black\" stroke-width = \"0.1\" fill = \"none\" />\n";
     
-    float AngleOffset = -90;//sets 0 degrees vertical
+    double AngleOffset = -90;//sets 0 degrees vertical
     
     string XStart = to_string(radius * cosf((angleStart + AngleOffset)*PI/180) + xCenter);
     string YStart = to_string(radius * sinf((angleStart + AngleOffset)*PI/180) + yCenter);
@@ -173,11 +173,11 @@ string SvgPacker::arc(float radius, float xCenter, float yCenter, float angleSta
 }
 
 //Creates a rotational pattern around a center
-string SvgPacker::rotationPattern(string content, int numberOfInstances, float xCenter, float yCenter)
+string SvgPacker::rotationPattern(string content, int numberOfInstances, double xCenter, double yCenter)
 {
     _TempContent.clear();
     
-    float Angle = 360.0/numberOfInstances;
+    double Angle = 360.0/numberOfInstances;
     for (int i = 0; i < numberOfInstances; i++)
     {
         addToTemp(rotationWrap(content, i * Angle, xCenter, yCenter));
@@ -187,22 +187,22 @@ string SvgPacker::rotationPattern(string content, int numberOfInstances, float x
 }
 
 //Creates a dashed circle around center. Centers vertically on either gap or segment
-string SvgPacker::dashedCircle(float radius, float xCenter, float yCenter,
-                               float arcLength, int numberOfArcs, bool centerOnGap)
+string SvgPacker::dashedCircle(double radius, double xCenter, double yCenter,
+                               double arcLength, int numberOfArcs, bool centerOnGap)
 {
     _TempContent.clear();
     
     //Find the length of gaps between arc segements
-    float GapLength = (360 - (arcLength * numberOfArcs)) / numberOfArcs;
+    double GapLength = (360 - (arcLength * numberOfArcs)) / numberOfArcs;
     
     //If centerOnGap, then offset starting angle by half of gap arc
-    float AngleInitial = centerOnGap * (GapLength / 2);
+    double AngleInitial = centerOnGap * (GapLength / 2);
     
     
     for (int i = 0; i < numberOfArcs; i++)
     {
-        float AngleStart = AngleInitial + ((arcLength + GapLength) * i);
-        float AngleStop = AngleStart + arcLength;
+        double AngleStart = AngleInitial + ((arcLength + GapLength) * i);
+        double AngleStop = AngleStart + arcLength;
         
         //add each arc to Temp
         addToTemp(arc(radius, xCenter, yCenter, AngleStart, AngleStop));

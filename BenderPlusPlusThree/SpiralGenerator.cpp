@@ -18,23 +18,23 @@ SpiralGenerator::SpiralGenerator(int density)
 }
 
 //Generates spiral pattern from vector of bounding point coordinates
-string SpiralGenerator::generate(vector<float> xy)
+string SpiralGenerator::generate(vector<double> xy)
 {
     /*
      *Determines point along edge that new line is drawn to
      *Ranges from 80 t0 95 percent of line length
      *Visually, this determines how "tight" the spiral appears
      */
-    float Weighting = (rand() % 15 + 80) / 100.0;
+    double Weighting = (rand() % 15 + 80) / 100.0;
     
     int i = 0;
     
-    vector<float> Coords = xy;
+    vector<double> Coords = xy;
     
-    vector<float> NextXY;
+    vector<double> NextXY;
     
-    float XCalc;
-    float YCalc;
+    double XCalc;
+    double YCalc;
     
     while (i < _density)
     {
