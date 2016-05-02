@@ -12,6 +12,7 @@
 		A57AC3F31CD05144008FC527 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A57AC3F21CD05144008FC527 /* main.cpp */; };
 		A57AC3F51CD05144008FC527 /* BenderPlusPlusThree.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = A57AC3F41CD05144008FC527 /* BenderPlusPlusThree.1 */; };
 		A57AC3FD1CD051DF008FC527 /* SvgPacker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A57AC3FB1CD051DF008FC527 /* SvgPacker.cpp */; };
+		A5BFF43A1CD7A7530085BBD8 /* Bender.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5BFF4381CD7A7530085BBD8 /* Bender.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		A57AC3F41CD05144008FC527 /* BenderPlusPlusThree.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = BenderPlusPlusThree.1; sourceTree = "<group>"; };
 		A57AC3FB1CD051DF008FC527 /* SvgPacker.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SvgPacker.cpp; sourceTree = "<group>"; };
 		A57AC3FC1CD051DF008FC527 /* SvgPacker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SvgPacker.h; sourceTree = "<group>"; };
+		A5BFF4381CD7A7530085BBD8 /* Bender.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bender.cpp; sourceTree = "<group>"; };
+		A5BFF4391CD7A7530085BBD8 /* Bender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bender.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +103,19 @@
 				A554C1261CD058C0000B3F80 /* SvgPacker */,
 				A554C1271CD058CC000B3F80 /* SpiralGenerator */,
 				A554C1281CD058E0000B3F80 /* GearGenerator */,
+				A5BFF4371CD7A7220085BBD8 /* Bender */,
 				A57AC3F41CD05144008FC527 /* BenderPlusPlusThree.1 */,
 			);
 			path = BenderPlusPlusThree;
+			sourceTree = "<group>";
+		};
+		A5BFF4371CD7A7220085BBD8 /* Bender */ = {
+			isa = PBXGroup;
+			children = (
+				A5BFF4381CD7A7530085BBD8 /* Bender.cpp */,
+				A5BFF4391CD7A7530085BBD8 /* Bender.h */,
+			);
+			name = Bender;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +171,7 @@
 			files = (
 				A554C1251CD05882000B3F80 /* GearGenerator.cpp in Sources */,
 				A57AC3FD1CD051DF008FC527 /* SvgPacker.cpp in Sources */,
+				A5BFF43A1CD7A7530085BBD8 /* Bender.cpp in Sources */,
 				A554C1221CD056B5000B3F80 /* SpiralGenerator.cpp in Sources */,
 				A57AC3F31CD05144008FC527 /* main.cpp in Sources */,
 			);
