@@ -9,12 +9,14 @@
 #include "SvgPacker.h"
 #include "SpiralGenerator.h"
 #include "GearGenerator.h"
+#include "Bender.h"
 
 using namespace std;
 
 SvgPacker svg;
 SpiralGenerator spiral(300);
 GearGenerator gear();
+Bender bend();
 
 int main(int argc, const char * argv[])
 {
