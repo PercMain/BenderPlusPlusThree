@@ -22,19 +22,17 @@ GearGenerator gear();
 
 int main(int argc, const char * argv[])
 {
-    vector<double> topTri = {200,20,130,150,270,150};
-    
-    vector<double> leftTri = {60,280,40,440,200,360};
-    
-    vector<double> rightTri = {340,280,200,360,360,440};
+    //vector<double> topTri = {200,20,130,150,270,150};
+    //svg.addToWork(spiral.generate(topTri));
+
+    //vector<double> leftTri = {60,280,40,440,200,360};
+    //svg.addToWork(spiral.generate(leftTri));
+
+    //vector<double> rightTri = {340,280,200,360,360,440};
+    //svg.addToWork(spiral.generate(rightTri));
+
     
     vector<double> midPent = {130,150,60,280,200,360,340,280,270,150};
-    
-    svg.addToWork(spiral.generate(topTri));
-    
-    svg.addToWork(spiral.generate(leftTri));
-    
-    svg.addToWork(spiral.generate(rightTri));
     
     svg.addToWork(spiral.generate(midPent));
     
