@@ -34,11 +34,20 @@ int main(int argc, const char * argv[])
     
     vector<double> midPent = {130,150,60,280,200,360,340,280,270,150};
     
+    //svg.addToWork(svg.poly(midPent));
+    svg.addToWork(svg.line(130, 150, 270, 150));
+    
     svg.addToWork(spiral.generate(midPent));
+    
     
     svg.addToWork(svg.fileFooter());
     
     cout << svg.WorkingContent;
+    
+    svg.publish("testB.svg");
+    
     return 0;
 }
+
+
 

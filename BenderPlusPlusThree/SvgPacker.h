@@ -62,6 +62,9 @@ public:
     //Creates polyline from coordinate vector
     string poly(vector<double> xy);
     
+    //Creates closed polygon from coordinate vector
+    string nGon(vector<double> xy);
+    
     //Creates a rotational pattern
     string rotationPattern(string content, int numberOfInstances, double xCenter, double yCenter);
     
@@ -84,6 +87,9 @@ public:
     
     //Temporary storage for file content before output to file
     string WorkingContent;
+    
+    //Push working content to SVG file
+    void publish(string fileName);
     
 private:
     

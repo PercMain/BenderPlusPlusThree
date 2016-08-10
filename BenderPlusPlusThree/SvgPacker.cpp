@@ -147,6 +147,7 @@ string SvgPacker::poly(vector<double> xy)
     
 }
 
+
 //Generates circle segment centered at coordinates between angle start and angle stop
 string SvgPacker::arc(double radius, double xCenter, double yCenter, double angleStart, double angleStop)
 {
@@ -233,6 +234,7 @@ string SvgPacker::dashedCircle(double radius, double xCenter, double yCenter,
     
 }
 
+
 //adds content to temporary file
 void SvgPacker::addToWork(string addition)
 {
@@ -243,4 +245,13 @@ void SvgPacker::addToWork(string addition)
 void SvgPacker::addToTemp(string addition)
 {
     _TempContent += addition;
+}
+
+void SvgPacker::publish(string fileName)
+{
+    ofstream outfile;
+    outfile.open("/Users/benlewson/Desktop/" + fileName);
+    outfile << WorkingContent << endl;
+    outfile.close();
+
 }
