@@ -234,6 +234,18 @@ string SvgPacker::dashedCircle(double radius, double xCenter, double yCenter,
     
 }
 
+string SvgPacker::nGon(vector<double> xy)
+{
+    _TempContent.clear();
+    
+    unsigned long end = xy.size();
+    
+    addToTemp(poly(xy));
+    addToTemp(line(xy[0], xy[1], xy[end-2], xy[end-1]));
+    
+    return  _TempContent;
+}
+
 
 //adds content to temporary file
 void SvgPacker::addToWork(string addition)
