@@ -12,6 +12,9 @@
 #include <iostream>
 #include "SvgPacker.h"
 
+//To be determined experimentally
+#define INCH_TO_NAT 1.0f
+
 class Bender
 {
 public:
@@ -29,7 +32,7 @@ public:
     //Uses the height of the segment to calculate an ideal length for vertical cuts. Defaults are set
     //for various segment heights and this function determines whether or not these defaults will be
     //suitable for a given height before returning either the pre-set cut length or an edited one as needed.
-    float calcVerticalCutLength(float height);
+    float calcVerticalCutLengthScaling(float height);
     
     //Uses the width and the number of desired cuts to calculate the spacing between cuts.
     float calcCutSpacing(float width, int numberOfSegments);
@@ -37,11 +40,14 @@ public:
     
     
 private:
-    float defaultVerticalCutLength;
-    float defaultVerticalSpacing;
+    //defaults in inches
+    float defaultVerticalCutLength = 2.0f;
+    float defaultVerticalSpacing = 0.25f;
     
     float verticalCutLengthScaling = 1.0f;
-    float verticalCutSpacingScaling = 1.0f;
+    //float verticalCutSpacingScaling = 1.0f;
+    
+    
     
     
     
