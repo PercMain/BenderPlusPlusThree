@@ -14,7 +14,7 @@
 using namespace std;
 
 SvgPacker svg;
-SpiralGenerator spiral(300);
+SpiralGenerator spiral(100);
 GearGenerator gear();
 //Bender bend();
 // Test
@@ -32,7 +32,7 @@ int main(int argc, const char * argv[])
     //svg.addToWork(spiral.generate(rightTri));
 
     
-    vector<double> midPent = {130,150,60,280,200,360,340,280,270,150};
+    vector<double> midPent = {130,130,70,260,200,360,330,260,270,130};
     
     
     svg.addToWork(svg.nGon(midPent));
@@ -44,7 +44,7 @@ int main(int argc, const char * argv[])
     
     cout << svg.WorkingContent;
     
-    svg.publish("testB.svg");
+    svg.publish("test6.svg");
     
     return 0;
 }
