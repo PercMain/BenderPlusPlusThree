@@ -19,7 +19,7 @@ class Bender
 {
 public:
     //Constructor
-    Bender();
+    Bender(float startingX = 0.0f, float startingY = 0.0f);
     
     //Full bend geometry generator. Takes inputs of height and width of rectangular section
     //in inches and a number of segments. Returns a section of valid SVG code representing
@@ -37,12 +37,27 @@ public:
     //Uses the width and the number of desired cuts to calculate the spacing between cuts.
     float calcCutSpacing(float width, int numberOfSegments);
     
+    //Adds an SVG Line to the file and moves the current cut coordinate from the start to the end
+    void makeCut(float startX, float startY, float endX, float endY);
+    
+    //Moves the cut coordinate to skip over area covered by cut gap
+    void makeGap(float startX, float startY, float endX, float endY);
+    
+    //Uses makeCut and makeGap to draw a vertical series. Alternator is used to select
+    //if the series is an even or odd numbered design.
+    //(starting with a cut or starting with a gap)
+    void makeSeries(float horizontalCoordinate, int alternator = 0);
+    
     
     
 private:
     //defaults in inches
-    float defaultVerticalCutLength = 2.0f;
-    float defaultVerticalSpacing = 0.25f;
+    float defaultVerticalCutLength;
+    float defaultVerticalSpacing;
+    
+    //Coordinates of cut location
+    float cutX;
+    float cutY;
     
     float verticalCutLengthScaling = 1.0f;
     //float verticalCutSpacingScaling = 1.0f;
