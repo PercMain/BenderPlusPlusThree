@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A535BAA91DCE48BA0055E13A /* Rabbit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A535BAA71DCE48BA0055E13A /* Rabbit.cpp */; };
 		A554C1221CD056B5000B3F80 /* SpiralGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A554C1201CD056B5000B3F80 /* SpiralGenerator.cpp */; };
 		A554C1251CD05882000B3F80 /* GearGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A554C1231CD05882000B3F80 /* GearGenerator.cpp */; };
 		A57AC3F31CD05144008FC527 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A57AC3F21CD05144008FC527 /* main.cpp */; };
@@ -29,6 +30,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A535BAA71DCE48BA0055E13A /* Rabbit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Rabbit.cpp; sourceTree = "<group>"; };
+		A535BAA81DCE48BA0055E13A /* Rabbit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Rabbit.h; sourceTree = "<group>"; };
 		A554C1201CD056B5000B3F80 /* SpiralGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SpiralGenerator.cpp; sourceTree = "<group>"; };
 		A554C1211CD056B5000B3F80 /* SpiralGenerator.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = SpiralGenerator.h; sourceTree = "<group>"; };
 		A554C1231CD05882000B3F80 /* GearGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GearGenerator.cpp; sourceTree = "<group>"; };
@@ -53,6 +56,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A535BAA51DCE487E0055E13A /* Rabbit */ = {
+			isa = PBXGroup;
+			children = (
+				A535BAA81DCE48BA0055E13A /* Rabbit.h */,
+				A535BAA71DCE48BA0055E13A /* Rabbit.cpp */,
+			);
+			name = Rabbit;
+			sourceTree = "<group>";
+		};
 		A554C1261CD058C0000B3F80 /* SvgPacker */ = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +113,7 @@
 			children = (
 				A57AC3F21CD05144008FC527 /* main.cpp */,
 				A554C1261CD058C0000B3F80 /* SvgPacker */,
+				A535BAA51DCE487E0055E13A /* Rabbit */,
 				A554C1271CD058CC000B3F80 /* SpiralGenerator */,
 				A554C1281CD058E0000B3F80 /* GearGenerator */,
 				A5BFF4371CD7A7220085BBD8 /* Bender */,
@@ -172,6 +185,7 @@
 				A554C1251CD05882000B3F80 /* GearGenerator.cpp in Sources */,
 				A57AC3FD1CD051DF008FC527 /* SvgPacker.cpp in Sources */,
 				A5BFF43A1CD7A7530085BBD8 /* Bender.cpp in Sources */,
+				A535BAA91DCE48BA0055E13A /* Rabbit.cpp in Sources */,
 				A554C1221CD056B5000B3F80 /* SpiralGenerator.cpp in Sources */,
 				A57AC3F31CD05144008FC527 /* main.cpp in Sources */,
 			);

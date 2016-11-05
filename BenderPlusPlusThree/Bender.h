@@ -41,12 +41,12 @@ public:
     void makeCut(float startX, float startY, float endX, float endY);
     
     //Moves the cut coordinate to skip over area covered by cut gap
-    void makeGap(float startX, float startY, float endX, float endY);
+    void makeGap(float length);
     
     //Uses makeCut and makeGap to draw a vertical series. Alternator is used to select
     //if the series is an even or odd numbered design.
     //(starting with a cut or starting with a gap)
-    void makeSeries(float horizontalCoordinate, int alternator = 0);
+    void makeSeries(float height, float horizontalCoordinate, bool alternator = true);
     
     
     
