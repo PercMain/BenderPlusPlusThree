@@ -19,7 +19,7 @@ Rabbit::Rabbit(float thickness)
 
 string Rabbit::generate(float length, float width, float depth, int lidStyle)
 {
-    //Make the shortest dimension the rabbited side to save material
+    //Make the shortest dimension the rabbeted side to save material
     if(length <= width)
     {
         float _innerDimX = length - (2 * _thickness);
@@ -29,8 +29,16 @@ string Rabbit::generate(float length, float width, float depth, int lidStyle)
         float _innerDimX = width = (2 * _thickness);
     }
     
-    //switch(lidStyle)
+    switch(lidStyle)
+    {
+        default: _innerDimY = depth - _thickness;
+            
+        case 1: _innerDimY = depth - (2 * _thickness);
+    }
     
+    
+    //rabbitInternalInstance.addToWork(rabbitInternalInstance.poly({0,0,width,depth}));
+                                     
     
     
     

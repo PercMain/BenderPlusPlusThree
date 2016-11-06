@@ -20,7 +20,7 @@ public:
     
     //Generate rabbit jointed box from dimensions and lid style
     //[0 = no lid, 1 = lid, 2 = hinged lid (future)]
-    string generate(float length, float width, float depth, int lidStyle);
+    string generate(float length, float width, float depth, int lidStyle = 0);
     
 private:
     float   _thickness;
